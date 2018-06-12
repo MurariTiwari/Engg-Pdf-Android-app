@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.tiwarithetiger11gmail.myengineeringpdfs.ScrollingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/title1"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.tiwarithetiger11gmail.myengineeringpdfs.ScrollingActivity">
+
+        tools:showIn="@layout/activity_scrolling">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:text="Select your Branch"
+                android:textSize="35sp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:id="@+id/branch">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CSE"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:id="@+id/cse"
+                    android:textColorLink="@color/colorPrimary"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ECE"
+                    android:id="@+id/ece"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:textColorLink="@color/colorPrimary"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ME"
+                    android:id="@+id/me"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:textColorLink="@color/colorPrimary"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="CE"
+                     android:id="@+id/ce"
+                    android:textSize="15sp"
+                    android:textColorLink="@color/colorPrimary" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EEE"
+                    android:id="@+id/eee"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:textColorLink="@color/colorPrimary"/>
+            </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:text="Select  Semester"
+                android:textSize="35sp"
+                />
+                   <EditText
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="30dp"
+                       android:layout_margin="20dp"
+                       android:hint="1"
+                       android:inputType="number"
+                       android:id="@+id/sem"
+                       android:maxLength="1"
+                       android:layout_marginBottom="30dp"></EditText>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/submit"
+                android:padding="25dp"
+                android:layout_gravity="center"
+                android:onClick="submit"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="136dp"
+        android:layout_height="90dp"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#000"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/fab" />
+
+
+</android.support.design.widget.CoordinatorLayout>

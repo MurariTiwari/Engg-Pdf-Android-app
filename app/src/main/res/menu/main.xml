@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="101"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item android:icon="@drawable/syll"
+        android:title="syllabus"
+        app:showAsAction="always"
+        android:id="@+id/syll"></item>
+
+    <item android:title="Online Learning">
+        <menu>
+            <item
+                android:id="@+id/nptel"
+                android:title="NPTEL" />
+            <item
+                android:id="@+id/edx"
+                android:title="EDX" />
+<item android:id="@+id/ndl"
+    android:title="NDL"></item>
+        </menu>
+    </item>
+
+
+</menu>

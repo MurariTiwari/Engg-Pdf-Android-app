@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/syll"
+            android:icon="@drawable/syll"
+            android:title="Syllabus" />
+        <item
+            android:id="@+id/ebook"
+            android:icon="@drawable/ebook"
+            android:title="E-BOOKS"
+            android:checked="true"/>
+        <item
+            android:id="@+id/notes"
+            android:icon="@drawable/notes"
+            android:title="NOTES" />
+        <item
+            android:id="@+id/qes"
+            android:icon="@drawable/question"
+            android:title="QUESTION BANK" />
+    <item
+       android:id="@+id/sol"
+        android:title="SOLVED PAPERS"
+        android:icon="@drawable/sol"/>
+        <item
+            android:id="@+id/prac"
+            android:title="PRACTICAL FILES"
+            android:icon="@drawable/prac"/>
+    </group>
+
+
+</menu>
